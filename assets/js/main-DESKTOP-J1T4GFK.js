@@ -252,19 +252,5 @@
       mirror: false
     })
   });
-  
-  (function(){
-    const timeEl = document.getElementById('time');
-    const dateEl = document.getElementById('date');
-    if (!timeEl || !dateEl) return;
-    function tick(){
-      const now = new Date();
-      timeEl.textContent = now.toLocaleTimeString('fr-FR', {hour:'2-digit', minute:'2-digit', second:'2-digit'});
-      let dateStr = now.toLocaleDateString('fr-FR', {weekday:'long', day:'2-digit', month:'long', year:'numeric'});
-      dateEl.textContent = dateStr.charAt(0).toUpperCase() + dateStr.slice(1);
-    }
-    tick();
-    setInterval(tick, 1000);
-  })();
-})()
 
+})()
